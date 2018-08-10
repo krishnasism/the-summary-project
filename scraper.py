@@ -1,4 +1,3 @@
-#10-08-2018 Krishnasis Mandal
 #Downloading text from Wikipedia Page using Beautiful Soup
 def scrape(topic):
     from bs4 import BeautifulSoup
@@ -19,6 +18,5 @@ def scrape(topic):
     return(text)
 #print(text)
     
-##DATA FETCHED PREPROCESSING
 
 
