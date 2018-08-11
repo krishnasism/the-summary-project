@@ -9,11 +9,11 @@ def scrape(topic):
     soup = BeautifulSoup(response.text,"lxml")
     t = soup.find_all('p') #fetch <p></p> tags 
     
-    text=""
+    text = ""
     
     for i in range(0,len(t)):
         #print(t[i].text) #display all text within <p> tags
-        text=text+t[i].text #add to corpus
+        text = text+t[i].text #add to corpus
     
     return(text)
 #print(text)
