@@ -13,10 +13,10 @@ def scrape(topic):
     
     for i in range(0,len(t)):
         #print(t[i].text) #display all text within <p> tags
-        text = text+t[i].text #add to corpus
+        text+=t[i].text #add to corpus
     
     return(text)
-#print(text)
+    #print(text)
     
 
 
