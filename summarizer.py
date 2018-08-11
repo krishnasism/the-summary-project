@@ -5,6 +5,8 @@ def summarize(text):
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.cluster import KMeans
    
+    import cleaner
+    
     words = word_tokenize(text)
     sentences = sent_tokenize(text)
     
@@ -83,7 +85,7 @@ def summarize(text):
     for sentence in sentences:
         #print(sentence)
         if sentence in sentence_score.keys() and sentence_score[sentence] > 2.6 * average_score:
-            summary += ""+sentence+"\n\n"
+            summary += ""+cleaner.clean(sentence)+"\n\n"
     
     print(summary)
     
@@ -124,6 +126,6 @@ def summarize(text):
     for sentence in sentences:
         #print(sentence)
         if sentence in sentence_score2.keys() and sentence_score2[sentence] > 2.6 * average_score:
-            summary += ""+sentence+"\n\n\n"
+            summary += ""+cleaner.clean(sentence)+"\n\n\n"
     
     return(summary)
