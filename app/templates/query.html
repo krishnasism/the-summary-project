@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summarizer</title>
+</head>
+<body>
+<form name="form" action="{% url "summarize" %}" method="POST" >{% csrf_token %}
+	<input type="text" name="topic">
+	<input type="submit" name="submit" value="submit">
+</form>
+</body>
+</html>
