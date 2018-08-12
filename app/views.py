@@ -7,15 +7,6 @@ from app.classes import controller
 def homePageView(request):
     return render(request,'query.html')
 
-class AboutPageView(TemplateView):
-    template_name = 'about.html'
-
-
-def hello(request):
-    number=779
-    text = "<h1>welcome to my app number %s!</h1>"% number
-    return HttpResponse(text)
-
 def summ(request):
     if request.method=="POST":
         Topic=TopicForm(request.POST)
