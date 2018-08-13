@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+
+	<title>OCR Summary</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+<style type="text/css">
+	.example{
+		background-color: #c8e4fb;
+		border-radius: 10px;
+		height: 200px; !important
+		text-align: center;
+		padding: 35px;
+	}
+</style>
+</head>
+<body>
+
+
+
+<a class="btn btn-primary" href="{% url "home" %}" role="button">Home</a>
+
+{% block content %}
+<center>
+<div class="example">
+
+<form method="post" enctype="multipart/form-data" action="{% url "imgUpload" %}">
+    {% csrf_token %}
+
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Choose Image <span class="badge badge-secondary">OCR</span></label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="myfile" accept="image/*">
+    <button type="submit" style="margin:15px;" class="btn btn-primary">Upload</button>
+
+  </div>
+</form>
+ {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+
+
+  <!--<form method="post" enctype="multipart/form-data" action="{% url "imgUpload" %}">
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>-->
+
+ </div>
+</center>
+
+{% endblock %}
+
+</body>
+</html>

@@ -4,5 +4,6 @@ from . import views
 urlpatterns=[
         path('',views.homePageView, name='home'),
         path('summarizer/',views.summ,name='summarize'), 
-        path('image/',views.imgsumm,name='imgsumm')
+        path('imageupload/',views.imagePageView,name='imgPageView'),
+        path('imgadd/',views.imageUpload,name='imgUpload'),
         ]   

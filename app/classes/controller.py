@@ -1,5 +1,6 @@
 import app.classes.scraper as scraper #scrape wikipedia  
 import app.classes.summarizer as summarizer #summarize
+import app.classes.image as image #summarize OCR
 def generateSummary(topic):    
     try:
         #topic=input("Enter topic you want to search: ")
@@ -14,3 +15,7 @@ def generateSummary(topic):
         return(e)
 
 #print(generateSummary('gay'))
+        
+def generateImageSummary(filename):
+    summary=image.imageSumm(filename)
+    return(summary)

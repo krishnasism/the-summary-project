@@ -85,7 +85,7 @@ def summarize(text):
     #change the value have more fun!
     for sentence in sentences:
         #print(sentence)
-        if sentence in sentence_score.keys() and sentence_score[sentence] > 2.6 * average_score:
+        if sentence in sentence_score.keys() and sentence_score[sentence] > 2.2 * average_score:
             summary.append(cleaner.clean(sentence))
     
     #print(summary)
@@ -125,7 +125,7 @@ def summarize(text):
     #change the value have more fun!
     for sentence in sentences:
         #print(sentence)
-        if sentence in sentence_score2.keys() and sentence_score2[sentence] > 2.6 * average_score:
+        if sentence in sentence_score2.keys() and sentence_score2[sentence] > 2.2 * average_score:
             summary.append(cleaner.clean(sentence))
     
     return(summary)
