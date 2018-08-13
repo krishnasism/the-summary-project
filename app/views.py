@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from app.forms import TopicForm
 # Create your views here.
 from app.classes import controller
+from app.classes import img
 def homePageView(request):
     return render(request,'query.html')
 
@@ -19,3 +20,7 @@ def summ(request):
     summary=controller.generateSummary(_topic)
     #text = "<h1>Summary: <br><br> %s!</h1>"% summ
     return render(request,'summary.html',{"summary":summary})
+
+def imgsumm(request):
+    text = img.img()
+    return HttpResponse(text)
