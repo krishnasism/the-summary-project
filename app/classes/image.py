@@ -4,7 +4,9 @@ def imageSumm(imageName):
     import cv2
     import os
     import app.classes.summarizer as summarizer #summarize
-
+    from nltk.tokenize import word_tokenize
+    from autocorrect import spell
+    import string
     # construct the argument parse and parse the arguments
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
@@ -24,6 +26,15 @@ def imageSumm(imageName):
     cv2.imwrite(filename, gray)
 
     text = pytesseract.image_to_string(Image.open(filename))
+    words = word_tokenize(text)
+    print(words)
+    text=""
+    for word in words:
+        if(word in string.punctuation):
+            text+=word
+        else:
+            text+=" "+spell(word)
+    print(text)
     summary=summarizer.summarize(text)
     print(text)
     print(summary)

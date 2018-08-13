@@ -9,7 +9,10 @@
 	<title>Summarizer</title>
 </head>
 <body>
+<a class="btn btn-light" href="{% url "imgPageView" %}" role="button">OCR</a>
+
 <center>
+
 <div class="example">
 
 <form name="form" action="{% url "summarize" %}" method="POST"> {% csrf_token %}
@@ -20,6 +23,7 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Yeet!</button>
+
 </form>
 
 

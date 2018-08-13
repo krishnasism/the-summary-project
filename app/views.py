@@ -37,6 +37,7 @@ def imageUpload(request):
         filename = fs.save(BASE_DIR+'\\app\\static\\images\\'+myfile.name, myfile)
         #uploaded_file_url = fs.url(filename)
         summary = controller.generateImageSummary(myfile.name)
+        
         return render(request,'summary.html',{"summary":summary})
         #text = "Image Uploaded<br><br>"+imageSumm1
         #return HttpResponse(text)

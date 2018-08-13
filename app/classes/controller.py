@@ -17,5 +17,8 @@ def generateSummary(topic):
 #print(generateSummary('gay'))
         
 def generateImageSummary(filename):
-    summary=image.imageSumm(filename)
-    return(summary)
+    try:
+        summary=image.imageSumm(filename)
+        return(summary)
+    except Exception as e:
+        return(e)
