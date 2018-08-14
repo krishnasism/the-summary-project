@@ -14,17 +14,18 @@ def imageSumm(imageName):
     
     # load the example image and convert it to grayscale
     #image = cv2.imread(BASE_DIR+'\\static\\images\\'+imageName)
-   # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    #gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
        
-   # gray = cv2.medianBlur(gray, 3)
-   # gray = cv2.threshold(gray, 0, 255,
-   # cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
+    #gray = cv2.medianBlur(gray, 3)
+    #gray = cv2.threshold(gray, 0, 255,
+    #cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
     #
    # print(rotated)
-    
+    path=BASE_DIR+'\\static\\images\\'+imageName;
+    gray=preprocess.crop(path)
     filename = BASE_DIR+'\\static\\images\\1.png'.format(os.getpid())
-    print(filename)
-    gray=preprocess.crop(filename)
+    #print(filename)
+    
 
     cv2.imwrite(filename, gray)
 

@@ -1,6 +1,7 @@
 def crop(path):
     import cv2
     import numpy as np
+    print(path)
     
     
     image = cv2.imread(path)
