@@ -48,5 +48,5 @@ If it runs properly, you will see the page on the local server IP that was assig
 
 ## Authors
 
-* **Krishnasis Mandal** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Krishnasis Mandal**
 
