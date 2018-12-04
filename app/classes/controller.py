@@ -14,7 +14,6 @@ def generateSummary(topic):
     except Exception as e:
         return(e)
 
-#print(generateSummary('gay'))
         
 def generateImageSummary(filename):
     try:
