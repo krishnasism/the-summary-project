@@ -9,7 +9,7 @@ The algorithm is a novel cluster based summarization tool that was conceieved as
 
 ### Prerequisites
 
-requirements.txt lists all the dependencies that need to get the project up and running on your local ser
+requirements.txt lists all the dependencies that need to get the project up and running on your local server
 ```
 pip install -r requirements.txt
 ```
