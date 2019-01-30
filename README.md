@@ -7,6 +7,8 @@ A webapp which will make it easier for students to gather and learn vital inform
 ## About the Algorithm
 The algorithm is a novel cluster based summarization tool that was conceieved as a part of a research project. The paper was presented at the IEMIS 2018, organized by the School of Information Technology (Ashram Campus), a unit of Institute of Engineering & Management, Kolkata.
 
+### Installing
+
 ### Prerequisites
 
 requirements.txt lists all the dependencies that need to get the project up and running on your local server
@@ -14,7 +16,6 @@ requirements.txt lists all the dependencies that need to get the project up and 
 pip install -r requirements.txt
 ```
 
-### Installing
 
 Browse to the cloned directory.
 
