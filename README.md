@@ -50,3 +50,12 @@ If it runs properly, you will see the page on the local server IP that was assig
 
 * **Krishnasis Mandal**
 
+###NOTE
+You might face an Import Error.
+####ImportError("cannot import name 'murmurhash3_32'",)
+
+To resolve this, simply execute this command
+```
+pip install -U scikit-learn
+```
+
