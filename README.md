@@ -23,6 +23,7 @@ Browse to the cloned directory.
 cd minor-project
 ```
 
+## Running
 Run the app
 ```
 python manage.py runserver
@@ -34,8 +35,6 @@ Django version 2.0.5, using settings 'Summary.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
-
-## Running
 
 If it runs properly, you will see the page on the local server IP that was assigned in the aforementioned step.
 ![summm](https://user-images.githubusercontent.com/21293324/44620713-da03da80-a8b6-11e8-8daf-844311183831.png)
