@@ -19,7 +19,10 @@ requirements.txt lists all the dependencies that need to get the project up and 
 ```
 pip install -r requirements.txt
 ```
-
+install lxml module
+```
+pip install lxml
+```
 
 
 
