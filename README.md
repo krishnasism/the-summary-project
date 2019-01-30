@@ -10,18 +10,18 @@ The algorithm is a novel cluster based summarization tool that was conceieved as
 ### Installing
 
 ### Prerequisites
+Browse to the cloned directory.
 
+```
+cd minor-project
+```
 requirements.txt lists all the dependencies that need to get the project up and running on your local server
 ```
 pip install -r requirements.txt
 ```
 
 
-Browse to the cloned directory.
 
-```
-cd minor-project
-```
 
 ## Running
 Run the app
