@@ -39,6 +39,14 @@ Quit the server with CTRL-BREAK.
 If it runs properly, you will see the page on the local server IP that was assigned in the aforementioned step.
 ![summm](https://user-images.githubusercontent.com/21293324/44620713-da03da80-a8b6-11e8-8daf-844311183831.png)
 
+### NOTE
+You might face an Import Error.
+This is caused by -> ImportError("cannot import name 'murmurhash3_32'",)
+
+To resolve this, simply execute this command
+```
+pip install -U scikit-learn
+```
 
 ## Built With
 
@@ -49,13 +57,3 @@ If it runs properly, you will see the page on the local server IP that was assig
 ## Authors
 
 * **Krishnasis Mandal**
-
-### NOTE
-You might face an Import Error.
-This is caused by -> ImportError("cannot import name 'murmurhash3_32'",)
-
-To resolve this, simply execute this command
-```
-pip install -U scikit-learn
-```
-
