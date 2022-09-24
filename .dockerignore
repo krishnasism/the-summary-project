@@ -1,0 +1,5 @@
+*.pyc
+*.pyo
+*.png
+*.md
+app/testing/*

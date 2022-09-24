@@ -1,9 +1,9 @@
-import cv2
 import numpy as np
 
 
 def crop(path: str):
-
+    # Unused
+    import cv2
     image = cv2.imread(path)
 
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

@@ -1,15 +1,16 @@
 from PIL import Image
 import pytesseract
-import cv2
 import os
-import app.classes.summarizer as summarizer  # summarize
-import app.classes.preprocess as preprocess  # preprocess
+import app.classes.summarizer as summarizer
+import app.classes.preprocess as preprocess
 from nltk.tokenize import word_tokenize
 from autocorrect import spell
 import string
 
 
 def imageSumm(imageName: str) -> str:
+    # Unused
+    import cv2
     """
     Summarise images (WIP)
     """

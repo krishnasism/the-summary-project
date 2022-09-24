@@ -1,7 +1,7 @@
 import app.classes.scraper as scraper
 import app.classes.summarizer as summarizer
 import app.classes.image as image
-
+import logging
 
 def generateSummary(topic: str) -> str:
     """
@@ -12,12 +12,14 @@ def generateSummary(topic: str) -> str:
         summary = summarizer.summarize(text)
         return summary
     except Exception as e:
-        return (str(e))
+        logging.error(e)
+        return ""
 
 
 def generateImageSummary(filename: str) -> str:
     try:
         summary = image.imageSumm(filename)
-        return (summary)
+        return summary
     except Exception as e:
-        return (str(e))
+        logging.error(e)
+        return ""
