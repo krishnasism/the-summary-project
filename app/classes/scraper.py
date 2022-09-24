@@ -1,22 +1,18 @@
-#Downloading text from Wikipedia Page using Beautiful Soup
-def scrape(topic):
+def scrape(topic: str) -> str:
+    """
+    Scrape wikipedia
+    """
     from bs4 import BeautifulSoup
     import requests
-    
-    ##DATA FETCH FROM WIKIPEDIA
-    #topic=input("Enter topic you want to search : ") #topic user wants to read about
+
+    # DATA FETCH FROM WIKIPEDIA
     response = requests.get("https://en.wikipedia.org/wiki/"+topic)
-    soup = BeautifulSoup(response.text,"lxml")
-    t = soup.find_all('p') #fetch <p></p> tags 
-    
+    soup = BeautifulSoup(response.text, "lxml")
+    t = soup.find_all('p') 
+
     text = ""
-    
-    for i in range(0,len(t)):
-        #print(t[i].text) #display all text within <p> tags
-        text+=t[i].text #add to corpus
-    
-    return(text)
-    #print(text)
-    
 
+    for i in range(0, len(t)):
+        text += t[i].text 
 
+    return text

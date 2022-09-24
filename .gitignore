@@ -1,0 +1,4 @@
+*.pyc
+*.pyo
+app/testing/
+app/testing/img2.py

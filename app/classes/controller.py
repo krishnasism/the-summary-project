@@ -1,23 +1,23 @@
-import app.classes.scraper as scraper #scrape wikipedia  
-import app.classes.summarizer as summarizer #summarize
-import app.classes.image as image #summarize OCR
-def generateSummary(topic):    
-    try:
-        #topic=input("Enter topic you want to search: ")
-        text=scraper.scrape(topic) #scraped data
-        #print(text) 
-        summary=summarizer.summarize(text)
-        #print(summary)
-        return(summary)
-        #summary=cleaner.clean(summary)
-       # print(summary)
-    except Exception as e:
-        return(e)
+import app.classes.scraper as scraper
+import app.classes.summarizer as summarizer
+import app.classes.image as image
 
-        
-def generateImageSummary(filename):
+
+def generateSummary(topic: str) -> str:
+    """
+    Get summary of a topic
+    """
     try:
-        summary=image.imageSumm(filename)
-        return(summary)
+        text = scraper.scrape(topic)
+        summary = summarizer.summarize(text)
+        return summary
     except Exception as e:
-        return(e)
+        return (str(e))
+
+
+def generateImageSummary(filename: str) -> str:
+    try:
+        summary = image.imageSumm(filename)
+        return (summary)
+    except Exception as e:
+        return (str(e))

@@ -1,5 +1,6 @@
-def clean(text):
+def clean(text: str) -> str:
+    """
+    Remove unwanted characters from text
+    """
     import re
-    #text=text.strip()
     return (re.sub('\[.*?\]', '', text)).strip()
-   # return text
