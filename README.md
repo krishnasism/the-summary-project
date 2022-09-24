@@ -7,32 +7,36 @@ A webapp which will make it easier for students to gather and learn vital inform
 ## About the Algorithm
 The algorithm is a novel cluster based summarization tool that was conceived as a part of a research project. The paper was presented at the IEMIS 2018, organized by the School of Information Technology (Ashram Campus), a unit of Institute of Engineering & Management, Kolkata.
 
-### Docker
+### Running - Docker
 Update: We have a Dockerfile now! You can simply run it using the following command:
 ```
 docker compose up --build
 ```
+The app can be accessed at localhost:8000
 
+- --
 ### Installing - Local
  
 ### Prerequisites
 Browse to the cloned directory.
 
 ```
-cd minor-project
+cd the-summary-project
 ```
 requirements.txt lists all the dependencies that need to get the project up and running on your local server
 ```
 pip install -r requirements.txt
 ```
-install lxml module
+install remaining modules
 ```
 pip install lxml
+python -m nltk.downloader punkt
+python -m nltk.downloader stopwords
 ```
 
 
 
-## Running
+### Running - Local
 Run the app
 ```
 python manage.py runserver
