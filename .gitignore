@@ -1,4 +1,4 @@
 *.pyc
 *.pyo
-app/testing/
+.gitignore
 app/testing/img2.py
