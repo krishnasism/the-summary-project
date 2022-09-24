@@ -1,13 +1,14 @@
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+
+import app.classes.cleaner as cleaner
+import os
+
+
 def summarize(text: str) -> list:
-    from nltk.corpus import stopwords
-    from nltk.tokenize import word_tokenize, sent_tokenize
-
-    from sklearn.feature_extraction.text import TfidfVectorizer
-    from sklearn.cluster import KMeans
-
-    import app.classes.cleaner as cleaner
-    import os
-
     words = word_tokenize(text)
     sentences = sent_tokenize(text)
 

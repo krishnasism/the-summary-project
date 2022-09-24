@@ -1,5 +1,5 @@
 from PIL import Image
-# import pytesseract
+import pytesseract
 import cv2
 import os
 import app.classes.summarizer as summarizer  # summarize
