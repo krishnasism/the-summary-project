@@ -8,3 +8,4 @@ RUN python -m nltk.downloader punkt
 RUN python -m nltk.downloader stopwords
 COPY . .
 EXPOSE $PORT
+CMD gunicorn --bind 0.0.0.0:$PORT app:app
