@@ -2,3 +2,4 @@
 *.pyo
 .gitignore
 app/testing/img2.py
+.env
