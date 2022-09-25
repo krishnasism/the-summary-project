@@ -9,23 +9,24 @@ import os
 
 
 def summarize(text: str) -> list:
-    words = word_tokenize(text)
     sentences = sent_tokenize(text)
 
     stop_words = set(stopwords.words("english"))
-    f = open(os.path.dirname(os.path.realpath(__file__))+"/stopwords.txt")
+    f = open(f"{os.path.dirname(os.path.realpath(__file__))}/stopwords.txt")
     for stops in f.read().split():
         stop_words.add(stops)
 
     vectorizer = TfidfVectorizer(stop_words='english')
     X = vectorizer.fit_transform(sentences)
 
+    # Fit data into 2 clusters
     true_k = 2
     model = KMeans(n_clusters=true_k, init='k-means++', max_iter=100, n_init=1)
     model.fit(X)
 
-    c1 = list()
-    c2 = list()
+    # Score each cluster
+    c1 = []
+    c2 = []
     order_centroids = model.cluster_centers_.argsort()[:, ::-1]
     terms = vectorizer.get_feature_names()
     for i in range(true_k):
