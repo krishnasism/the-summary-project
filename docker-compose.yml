@@ -8,3 +8,4 @@ services:
       - /code/
     ports:
       - "${PORT}:${PORT}"
+    dns: 8.8.8.8
