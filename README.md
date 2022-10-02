@@ -1,4 +1,4 @@
-# Minor Project for BCA 5th Semester
+# The Summary Project
 * Currently live at : http://ec2-54-234-175-23.compute-1.amazonaws.com/ [Only works over HTTP]
 ## Summarizer
 
@@ -32,12 +32,6 @@ install remaining modules
 pip install lxml
 python -m nltk.downloader punkt
 python -m nltk.downloader stopwords
-```
-
-
-Before running, don't forget to create a `.env` file in the root directory
-```
-PORT=8080
 ```
 
 ### Running - Local
