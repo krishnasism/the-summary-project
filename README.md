@@ -35,6 +35,10 @@ python -m nltk.downloader stopwords
 ```
 
 
+Before running, don't forget to create a `.env` file in the root directory
+```
+PORT=8080
+```
 
 ### Running - Local
 Run the app
