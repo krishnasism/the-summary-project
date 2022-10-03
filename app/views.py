@@ -17,15 +17,17 @@ def homePageView(request):
 def summ(request):
     if request.method == "POST":
         Topic = TopicForm(request.POST)
-
+    _topic = ""
     if Topic.is_valid():
         _topic = Topic.cleaned_data['topic']
     else:
         Topic = TopicForm()
 
-    summary = controller.generateSummary(_topic)
-    return render(request, 'summary.html', {"summary": summary})
-
+    if _topic and len(str(_topic).strip()) != 0:
+        summary = controller.generateSummary(_topic)
+        return render(request, 'summary.html', {"summary": summary})
+    else:
+        return homePageView(request)
 
 def imagePageView(request):
     # Unused
