@@ -59,12 +59,6 @@ To resolve this, simply execute this command
 pip install -U scikit-learn
 ```
 
-## Built With
-
-* [Django](https://www.djangoproject.com/) - The web framework used
-* [Anaconda](https://anaconda.org/) - IDE
-* [Python](https://www.python.org/) - I don't need to explain why ☺
-
 ## Authors
 
 * **Krishnasis Mandal**
