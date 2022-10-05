@@ -4,30 +4,42 @@ from django.views.generic import TemplateView
 
 from app.classes import controller
 
-from app.forms import TopicForm
+from app.forms import TopicForm, UserTextForm
 
 from django.core.files.storage import FileSystemStorage
 import os
+import logging
 
 
 def homePageView(request):
     return render(request, 'query.html')
 
 
-def summ(request):
-    if request.method == "POST":
-        Topic = TopicForm(request.POST)
-    _topic = ""
-    if Topic.is_valid():
-        _topic = Topic.cleaned_data['topic']
-    else:
-        Topic = TopicForm()
+def textSummaryPageView(request):
+    return render(request, 'summarisetext.html')
 
-    if _topic and len(str(_topic).strip()) != 0:
-        summary = controller.generateSummary(_topic)
+
+def summ(request):
+    CurrentForm = None
+    text_summary = False
+    if request.method == "POST":
+        if "summaryText" in request.META['HTTP_REFERER']:
+            CurrentForm = UserTextForm(request.POST)
+            text_summary = True
+        else:
+            CurrentForm = TopicForm(request.POST)
+
+    _input = ""
+    if CurrentForm.is_valid():
+        _input = CurrentForm.cleaned_data['input']
+    else:
+        CurrentForm = TopicForm()
+    if _input and len(str(_input).strip()) != 0:
+        summary = controller.generateSummary(_input, text_summary)
         return render(request, 'summary.html', {"summary": summary})
     else:
         return homePageView(request)
+
 
 def imagePageView(request):
     # Unused

@@ -3,9 +3,9 @@ version: "3.9"
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:80
+    command: python -u manage.py runserver 0.0.0.0:80
     volumes:
       - /code/
     ports:
-      - "80:80"
+      - "8080:80"
     dns: 8.8.8.8
