@@ -1,15 +1,35 @@
-.input_container{
-		height: 150px;
-		width: 450px;
-		padding: 20px;
-		margin: 20%;
-		text-align: center;
-	}
+.input_container {
+	height: 150px;
+	width: 450px;
+	padding: 20px;
+	margin: 20%;
+	text-align: center;
+}
 
-body{
+body {
 	padding: 5px;
 }
-.card
-{
-	margin:20px !important; 
+
+.card {
+	margin: 20px !important;
+}
+
+@media (max-width: 575px) {
+	.input_container {
+		margin-left: 5px;
+		margin-top: 30%;
+		width: 95%;
+	}
+}
+
+.active {
+	text-decoration: underline;
+}
+
+.nav-item:hover {
+	text-decoration: underline;
+}
+
+.navbar-menu {
+	position: absolute;
 }

@@ -28,7 +28,7 @@ def summarize(text: str) -> list:
     c1 = []
     c2 = []
     order_centroids = model.cluster_centers_.argsort()[:, ::-1]
-    terms = vectorizer.get_feature_names()
+    terms = vectorizer.get_feature_names_out()
     for i in range(true_k):
         for ind in order_centroids[i, :10]:
             if (i == 0):

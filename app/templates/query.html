@@ -2,7 +2,7 @@
 {% block content %}
 <center>
 <div class="input_container">
-<form id="queryForm" name="form" action="{% url "summarize" %}" method="POST"> {% csrf_token %}
+<form id="queryForm" class="input-form" name="form" action="{% url "summarize" %}" method="POST"> {% csrf_token %}
   <div class="form-group">
     <input type="text" class="form-control" id="txtInput" aria-describedby="emailHelp" placeholder="Show me less about..." name="input">
     <small id="emailHelp" class="form-text text-muted">What do you want to study about?</small>
