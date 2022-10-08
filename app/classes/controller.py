@@ -16,7 +16,7 @@ def generateSummary(input: str, text_summary: bool) -> str:
         return summary
     except Exception as e:
         logging.error(e)
-        return ""
+        return ["Sorry, we were unable to process your request"]
 
 
 def generateImageSummary(filename: str) -> str:
