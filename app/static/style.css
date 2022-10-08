@@ -32,4 +32,11 @@ body {
 
 .navbar-menu {
 	position: absolute;
+	background-color: white;
+	z-index: 9999;
+	width:95%;
+}
+
+.navbar {
+	background-color: white !important;
 }
