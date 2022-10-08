@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+<div class="input_container">
+<form id="queryForm" name="form" action="{% url "summarize" %}" method="POST"> {% csrf_token %}
+  <div class="form-group">
+    <textarea class="form-control" name="input" form="queryForm" id="txtInput" aria-describedby="txtHelp" placeholder="Show me less about..."></textarea>
+    <small id="txtHelp" class="form-text text-muted">Paste your stuff here</small>
+  </div>
+
+  <button type="button" class="btn btn-primary" onclick="validateInput()">Summarise</button>
+</form>
+</div>
+</center>
+{% endblock content %}
